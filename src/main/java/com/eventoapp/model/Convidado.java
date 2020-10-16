@@ -5,10 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotBlank;
+
 import javax.validation.constraints.NotEmpty;
-
-
 
 @Entity
 public class Convidado {
@@ -17,13 +15,9 @@ public class Convidado {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long code;
 	
-	@NotBlank
-	@NotEmpty
-	private String rg;
+	@NotEmpty private String rg;
 	
-	@NotBlank
-	@NotEmpty
-	private String nomeConvidado;
+	@NotEmpty private String nomeConvidado;
 	
 	@ManyToOne
 	private Evento evento;
@@ -59,8 +53,5 @@ public class Convidado {
 	public void setCode(long code) {
 		this.code = code;
 	}
-	
-	
-	
 
 }

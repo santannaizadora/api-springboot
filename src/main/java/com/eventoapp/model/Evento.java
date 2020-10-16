@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Evento {
@@ -20,10 +21,10 @@ public class Evento {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long codigo;
 	
-	private String nome;
-	private String local;
-	private String data;
-	private String horario;
+	@NotEmpty private String nome;
+	@NotEmpty private String local;
+	@NotEmpty private String data;
+	@NotEmpty private String horario;
 	
 	@OneToMany
 	private List<Convidado> convidados;

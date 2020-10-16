@@ -47,7 +47,7 @@
 	
 	</table>
 
-
+	<h4>Adicionar convidados</h4>
 		 <th:block th:include="mensagemValidacao"></th:block>
 	<form class ="container" method="post" th:object="${convidado}">
 			Nome: <input type="text" value="" name="nomeConvidado" placeholder="Nome Completo"/>
@@ -55,6 +55,7 @@
 			<button class="waves-effect waves-light btn" type="submit">Adicionar</button>
 		</form>
 	
+	<h4>Convidados</h4>
 	<table class="container tabelaConvidado">
 		<thead>
 			<tr>
